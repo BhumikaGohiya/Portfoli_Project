@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Linkedin, Github, Mail, Phone } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -10,21 +10,54 @@ const Hero = () => {
         <h1 className="animate-fade-up-delay-1 font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
           Bhumika Gohiya<span className="text-gradient">.</span>
         </h1>
-        <p className="animate-fade-up-delay-2 text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mb-12 leading-relaxed">
+        <p className="animate-fade-up-delay-2 text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">
           QA Automation Engineer with 4+ years of experience in Selenium, Java, API Testing & CI/CD pipelines.
         </p>
-        <div className="animate-fade-up-delay-3 flex flex-wrap gap-4">
+        
+        {/* Social Links */}
+        <div className="animate-fade-up-delay-2 flex flex-wrap items-center gap-4 mb-12">
           <a
-            href="#work"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
+            href="https://linkedin.com/in/bhumikagohiya"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
           >
-            View my work
+            <Linkedin size={18} /> LinkedIn
           </a>
           <a
+            href="https://github.com/BhumikaGohiya"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            <Github size={18} /> GitHub
+          </a>
+          <a
+            href="mailto:bhumikagohiya@example.com"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            <Mail size={18} /> Email
+          </a>
+          <a
+            href="tel:+1234567890"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            <Phone size={18} /> Phone
+          </a>
+        </div>
+
+        <div className="animate-fade-up-delay-3 flex flex-wrap gap-4">
+          <a
             href="#about"
-            className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground rounded-full font-medium hover:bg-secondary transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
           >
             Learn more
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground rounded-full font-medium hover:bg-secondary transition-colors"
+          >
+            Get in touch
           </a>
         </div>
       </div>
