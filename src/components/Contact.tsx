@@ -162,26 +162,26 @@ const Contact = () => {
             </div>
 
             {/* Let's Chat Card */}
-            <div className="bg-gradient-to-br from-amber-500 to-orange-500 rounded-3xl p-6 text-white shadow-xl shadow-amber-200/30 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex-1 flex flex-col">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                  <Coffee size={20} className="text-white" />
+            <div className="bg-gradient-to-br from-amber-500 to-orange-500 rounded-3xl p-8 text-white shadow-xl shadow-amber-200/30 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex-1 flex flex-col">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                  <Coffee size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold">Let's Chat!</h3>
-                  <p className="text-white/80 text-xs">Book a virtual coffee with me</p>
+                  <h3 className="font-display text-xl font-bold">Let's Chat!</h3>
+                  <p className="text-white/80 text-sm">Book a virtual coffee with me</p>
                 </div>
               </div>
-              <p className="text-white/90 mb-4 text-sm leading-relaxed flex-grow">
+              <p className="text-white/90 mb-6 text-base leading-relaxed flex-grow">
                 Prefer a quick conversation? Schedule a 15-min coffee chat to discuss opportunities or collaborations!
               </p>
               <a
                 href="https://calendly.com/bhumikagohiya96/coffee-chat-with-bhumika?month=2026-01"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-amber-600 font-semibold rounded-xl hover:bg-amber-50 transition-colors w-full justify-center text-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-amber-600 font-semibold rounded-xl hover:bg-amber-50 transition-colors w-full justify-center"
               >
-                <Calendar size={18} />
+                <Calendar size={20} />
                 Book Coffee Chat
               </a>
             </div>
