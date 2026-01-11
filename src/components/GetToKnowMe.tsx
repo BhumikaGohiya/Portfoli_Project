@@ -1,4 +1,4 @@
-import { Briefcase, TestTube, Smartphone, Server, Settings, Workflow, CheckCircle2, Bug, Layers } from "lucide-react";
+import { Briefcase, TestTube, Smartphone, Server, Workflow, Bug, Layers, TrendingUp, Users, Zap } from "lucide-react";
 
 const GetToKnowMe = () => {
   const stats = [
@@ -59,34 +59,45 @@ const GetToKnowMe = () => {
     },
   ];
 
-  const experiences = [
+  const timeline = [
     {
-      title: "Senior Analyst – Test Automation Engineering",
-      company: "Accenture",
-      period: "Nov 2021 – Feb 2023",
-      bullets: [
-        "Achieved 85% automation coverage by automating 500+ test cases on Salesforce-based financial systems",
-        "Led a QA team of 4-5 professionals, increasing productivity by 30%",
+      period: "2021 - 2023",
+      title: "Senior Analyst",
+      role: "Test Automation Engineering",
+      icon: Users,
+      color: "from-violet-500 to-purple-600",
+      achievements: [
+        { label: "Team Size", value: "4-5" },
+        { label: "Productivity", value: "+30%" },
       ],
     },
     {
-      title: "Test Engineering Analyst",
-      company: "Accenture",
-      period: "Jul 2020 – Nov 2021",
-      bullets: [
-        "Reduced manual testing effort by 40% through mobile automation for Android and iOS",
-        "Integrated automated test suites into Jenkins CI/CD pipelines",
+      period: "2020 - 2021",
+      title: "Analyst",
+      role: "Test Engineering",
+      icon: Zap,
+      color: "from-cyan-500 to-blue-600",
+      achievements: [
+        { label: "Mobile Platforms", value: "2" },
+        { label: "CI/CD", value: "Jenkins" },
       ],
     },
     {
-      title: "Test Engineering Associate",
-      company: "Accenture",
-      period: "Aug 2018 – Jul 2020",
-      bullets: [
-        "Designed and executed 300+ BDD test scripts using Selenium, Java, and TestNG",
-        "Maintained 98% defect closure rate managing 300+ issues in JIRA",
+      period: "2018 - 2020",
+      title: "Associate",
+      role: "Test Engineering",
+      icon: TrendingUp,
+      color: "from-emerald-500 to-teal-600",
+      achievements: [
+        { label: "BDD Scripts", value: "300+" },
+        { label: "Issues Managed", value: "300+" },
       ],
     },
+  ];
+
+  const impactMetrics = [
+    { value: "85%", label: "Automation Coverage", color: "from-violet-500 to-purple-600", size: "large" },
+    { value: "98%", label: "Defect Closure Rate", color: "from-emerald-500 to-teal-600", size: "large" },
   ];
 
   return (
@@ -105,7 +116,7 @@ const GetToKnowMe = () => {
           </p>
         </div>
 
-        {/* Stats Row - Unique Gradient Cards */}
+        {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {stats.map((stat, index) => (
             <div
@@ -121,7 +132,7 @@ const GetToKnowMe = () => {
           ))}
         </div>
 
-        {/* Expertise Grid - Colorful Unique Cards */}
+        {/* Expertise Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {expertiseAreas.map((area, index) => (
             <div
@@ -145,40 +156,93 @@ const GetToKnowMe = () => {
           ))}
         </div>
 
-        {/* Work Experience */}
-        <div>
+        {/* Work Experience - Visual Timeline */}
+        <div id="experience" className="mb-20">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-full mb-4">
               Professional Journey
             </span>
             <h3 className="font-display text-3xl md:text-4xl font-bold text-slate-900 mb-2">
-              Work Experience
+              Career at Accenture
             </h3>
-            <p className="text-slate-500">Growing through challenges at Accenture</p>
+            <p className="text-slate-500">A visual timeline of growth and impact</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {experiences.map((exp, index) => (
+          {/* Timeline Visual */}
+          <div className="relative">
+            {/* Connection Line */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-violet-200 via-cyan-200 to-emerald-200 -translate-y-1/2 rounded-full" />
+            
+            <div className="grid md:grid-cols-3 gap-6 relative">
+              {timeline.map((item, index) => (
+                <div key={index} className="relative group">
+                  {/* Card */}
+                  <div className="bg-white rounded-3xl p-6 border border-slate-100 hover:shadow-2xl hover:border-transparent transition-all duration-300 relative overflow-hidden">
+                    {/* Background gradient on hover */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                    
+                    {/* Timeline dot */}
+                    <div className="hidden md:flex absolute -bottom-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-slate-200 group-hover:border-violet-400 transition-colors z-10" />
+                    
+                    {/* Icon */}
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
+                      <item.icon size={28} className="text-white" />
+                    </div>
+                    
+                    {/* Period Badge */}
+                    <span className={`inline-block px-3 py-1 bg-gradient-to-r ${item.color} text-white text-xs font-semibold rounded-full mb-3`}>
+                      {item.period}
+                    </span>
+                    
+                    {/* Title */}
+                    <h4 className="font-display text-xl font-bold text-slate-900 mb-1">{item.title}</h4>
+                    <p className="text-slate-500 text-sm mb-4">{item.role}</p>
+                    
+                    {/* Achievement Metrics */}
+                    <div className="grid grid-cols-2 gap-3">
+                      {item.achievements.map((achievement, i) => (
+                        <div key={i} className="bg-slate-50 rounded-xl p-3 text-center group-hover:bg-slate-100 transition-colors">
+                          <p className={`font-display text-lg font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
+                            {achievement.value}
+                          </p>
+                          <p className="text-slate-500 text-xs">{achievement.label}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Impact Metrics - Large Visual Blocks */}
+        <div>
+          <div className="text-center mb-10">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-2">
+              Key Impact
+            </h3>
+            <p className="text-slate-500">Numbers that define my contribution</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {impactMetrics.map((metric, index) => (
               <div
                 key={index}
-                className="p-6 bg-white rounded-2xl border border-slate-200 hover:shadow-lg hover:border-violet-200 transition-all group"
+                className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${metric.color} p-10 text-white text-center hover:scale-[1.02] transition-all duration-300 shadow-xl`}
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center group-hover:bg-violet-200 transition-colors">
-                    <Briefcase size={20} className="text-violet-600" />
-                  </div>
-                  <span className="text-slate-500 text-sm font-medium">{exp.period}</span>
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10">
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-white rounded-full -translate-y-1/2 translate-x-1/2" />
+                  <div className="absolute bottom-0 left-0 w-32 h-32 bg-white rounded-full translate-y-1/2 -translate-x-1/2" />
                 </div>
-                <h4 className="font-display text-lg font-bold text-slate-900 mb-1">{exp.company}</h4>
-                <p className="text-violet-600 font-medium text-sm mb-4">{exp.title}</p>
-                <ul className="space-y-2">
-                  {exp.bullets.map((bullet, i) => (
-                    <li key={i} className="flex items-start gap-2 text-slate-600 text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-violet-500 mt-1.5 flex-shrink-0" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
+                
+                <div className="relative">
+                  <p className="font-display text-6xl md:text-7xl font-bold mb-2 group-hover:scale-110 transition-transform">
+                    {metric.value}
+                  </p>
+                  <p className="text-white/90 text-xl font-medium">{metric.label}</p>
+                </div>
               </div>
             ))}
           </div>

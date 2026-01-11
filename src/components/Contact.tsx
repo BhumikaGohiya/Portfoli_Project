@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle2, Sparkles, Zap, TrendingUp, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle2, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -13,12 +13,6 @@ const Contact = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const highlights = [
-    { icon: Zap, value: "85%", label: "Automation Coverage" },
-    { icon: TrendingUp, value: "30%", label: "Faster Release Cycles" },
-    { icon: Sparkles, value: "CI/CD", label: "Pipeline Integration" },
-  ];
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "bhumikagohiya96@gmail.com", href: "mailto:bhumikagohiya96@gmail.com" },
@@ -164,26 +158,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Why Hire Me Card */}
-            <div className="bg-gradient-to-br from-violet-600 to-cyan-600 rounded-3xl p-8 text-white shadow-xl shadow-violet-200/30 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-              <h3 className="font-display text-xl font-bold mb-6 flex items-center gap-2">
-                <Sparkles size={20} />
-                Why Hire Me
-              </h3>
-              <div className="space-y-4">
-                {highlights.map((item, index) => (
-                  <div key={index} className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/20 transition-colors">
-                    <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                      <item.icon size={20} className="text-white" />
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold">{item.value}</p>
-                      <p className="text-white/80 text-sm">{item.label}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Contact Form */}
