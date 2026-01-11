@@ -1,4 +1,4 @@
-import { ArrowDown, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowDown, Linkedin, Github, Mail, Phone, MapPin, Search, FileText, Send } from "lucide-react";
 import profileImage from "@/assets/profile.jpeg";
 
 const Hero = () => {
@@ -43,7 +43,7 @@ const Hero = () => {
                 <Github size={16} /> GitHub
               </a>
               <a
-                href="https://linkedin.com/in/bhumikagohiya"
+                href="https://linkedin.com/in/bhumika-gohiya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium text-slate-700 hover:border-slate-400 hover:shadow-md transition-all"
@@ -51,13 +51,13 @@ const Hero = () => {
                 <Linkedin size={16} /> LinkedIn
               </a>
               <a
-                href="mailto:bhumikagohiya@example.com"
+                href="mailto:bhumikagohiya96@gmail.com"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium text-slate-700 hover:border-slate-400 hover:shadow-md transition-all"
               >
                 <Mail size={16} /> Email
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+16132522570"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium text-slate-700 hover:border-slate-400 hover:shadow-md transition-all"
               >
                 <Phone size={16} /> Phone
@@ -67,6 +67,33 @@ const Hero = () => {
             <p className="animate-fade-up-delay-2 text-lg text-slate-600 max-w-2xl mb-8 leading-relaxed mx-auto lg:mx-0">
               QA Automation Engineer with over 4 years of experience working on large-scale enterprise and BFSI applications. Strong background in UI and API automation, CI/CD integration, mobile testing, and end-to-end quality assurance.
             </p>
+
+            {/* CTA Buttons */}
+            <div className="animate-fade-up-delay-2 flex flex-wrap justify-center lg:justify-start gap-4">
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-600 to-cyan-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-violet-200 hover:scale-105 transition-all duration-300"
+              >
+                <Search size={20} />
+                Explore My Work
+              </a>
+              <a
+                href="/documents/Bhumika_Gohiya_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-violet-200 text-violet-700 font-semibold rounded-full hover:border-violet-400 hover:shadow-md transition-all duration-300"
+              >
+                <FileText size={20} />
+                Download Resume
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-semibold rounded-full hover:bg-slate-800 hover:shadow-lg transition-all duration-300"
+              >
+                <Send size={20} />
+                Let's Collaborate →
+              </a>
+            </div>
           </div>
         </div>
       </div>
