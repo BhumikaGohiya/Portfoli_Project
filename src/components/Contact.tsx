@@ -63,26 +63,40 @@ const Contact = () => {
     
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
-    // Open email client with form data
-    const subject = encodeURIComponent(formData.subject);
-    const body = encodeURIComponent(
-      `Hi Bhumika,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\n---\nSent from your portfolio website`
-    );
-    window.location.href = `mailto:bhumikagohiya96@gmail.com?subject=${subject}&body=${body}`;
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    
-    toast({
-      title: "Opening email client...",
-      description: "Your message is ready to send via email.",
-    });
-    
-    setTimeout(() => setIsSubmitted(false), 5000);
+    try {
+      const response = await fetch("https://formspree.io/f/xreeznlo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+        });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again or email me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
