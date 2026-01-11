@@ -31,7 +31,7 @@ const ProjectCard = ({ title, category, description, image, index }: ProjectCard
           href="#"
           className="inline-flex items-center gap-1 text-sm font-medium text-foreground hover:text-primary transition-colors"
         >
-          View project <ArrowUpRight size={16} />
+          View details <ArrowUpRight size={16} />
         </a>
       </div>
     </div>

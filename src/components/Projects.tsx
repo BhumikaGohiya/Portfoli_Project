@@ -5,21 +5,21 @@ import projectImage3 from "@/assets/project-3.jpg";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    category: "Web Development",
-    description: "A modern shopping experience with seamless checkout and inventory management.",
+    title: "Salesforce Test Automation",
+    category: "Test Automation",
+    description: "Achieved 85% automation coverage by automating 500+ test cases on Salesforce-based financial systems at Accenture.",
     image: projectImage1,
   },
   {
-    title: "Finance Dashboard",
-    category: "UI/UX Design",
-    description: "Real-time analytics dashboard for tracking investments and market trends.",
+    title: "CI/CD Pipeline Integration",
+    category: "DevOps & QA",
+    description: "Integrated automated test suites into Jenkins CI/CD pipelines, reducing deployment time by 15% and manual effort by 40%.",
     image: projectImage2,
   },
   {
-    title: "Health & Wellness App",
-    category: "Mobile Development",
-    description: "Cross-platform app helping users track fitness goals and mindfulness.",
+    title: "AI-Powered Healthcare Hiring",
+    category: "Data Analytics & AI",
+    description: "Analyzed 200+ healthcare datasets using Python, created AI personas for onboarding simulations and DLT-based credential verification.",
     image: projectImage3,
   },
 ];
@@ -31,21 +31,13 @@ const Projects = () => {
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-4">Selected work</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
-            Projects I'm proud of
+            Projects & Experience
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} {...project} index={index} />
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground rounded-full font-medium hover:bg-secondary transition-colors"
-          >
-            View all projects
-          </a>
         </div>
       </div>
     </section>
