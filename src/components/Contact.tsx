@@ -1,4 +1,4 @@
-import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, ArrowUpRight, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -11,21 +11,29 @@ const Contact = () => {
               Let's work together<span className="text-gradient">.</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              I'm always open to discussing new projects, creative ideas, or opportunities 
-              to be part of your vision.
+              I'm open to discussing QA automation opportunities, test strategy consulting, 
+              or collaborating on innovative quality solutions.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
                   <Mail size={18} className="text-primary" />
                 </div>
-                <span className="text-foreground">hello@alexrivera.dev</span>
+                <a href="mailto:bhumikagohiya96@gmail.com" className="text-foreground hover:text-primary transition-colors">
+                  bhumikagohiya96@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
+                  <Phone size={18} className="text-primary" />
+                </div>
+                <span className="text-foreground">+1 (613) 252-2570</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
                   <MapPin size={18} className="text-primary" />
                 </div>
-                <span className="text-foreground">San Francisco, CA</span>
+                <span className="text-foreground">North York, Ontario, Canada</span>
               </div>
             </div>
           </div>

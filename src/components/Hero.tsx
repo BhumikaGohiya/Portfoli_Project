@@ -8,10 +8,10 @@ const Hero = () => {
           <p className="text-primary font-medium mb-4">Hello, I'm</p>
         </div>
         <h1 className="animate-fade-up-delay-1 font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-          Alex Rivera<span className="text-gradient">.</span>
+          Bhumika Gohiya<span className="text-gradient">.</span>
         </h1>
-        <p className="animate-fade-up-delay-2 text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-2xl mb-12 leading-relaxed">
-          A creative developer crafting beautiful digital experiences through code and design.
+        <p className="animate-fade-up-delay-2 text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mb-12 leading-relaxed">
+          QA Automation Engineer with 4+ years of experience in Selenium, Java, API Testing & CI/CD pipelines.
         </p>
         <div className="animate-fade-up-delay-3 flex flex-wrap gap-4">
           <a
