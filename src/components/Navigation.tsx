@@ -35,6 +35,9 @@ const Navigation = () => {
           <a href="#experience" className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all">
             Experience
           </a>
+          <a href="#projects" className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all">
+            Projects
+          </a>
           <a href="#achievements" className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all">
             Credentials
           </a>
