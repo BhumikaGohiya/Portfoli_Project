@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle2, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle2, MessageCircle, Coffee, Calendar } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -66,9 +66,8 @@ const Contact = () => {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    // Open email client with form data
-    const mailtoLink = `mailto:bhumikagohiya96@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`From: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
-    window.location.href = mailtoLink;
+    // Open LinkedIn DMs
+    window.open("https://www.linkedin.com/messaging/compose/?recipient=bhumika-gohiya", "_blank");
     
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -142,7 +141,7 @@ const Contact = () => {
               </div>
 
               {/* Social Links */}
-              <div className="flex gap-3">
+              <div className="flex gap-3 mb-8">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
@@ -156,6 +155,31 @@ const Contact = () => {
                   </a>
                 ))}
               </div>
+            </div>
+
+            {/* Let's Chat Card */}
+            <div className="bg-gradient-to-br from-amber-500 to-orange-500 rounded-3xl p-8 text-white shadow-xl shadow-amber-200/30 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
+                  <Coffee size={24} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-bold">Let's Chat!</h3>
+                  <p className="text-white/80 text-sm">Book a virtual coffee with me</p>
+                </div>
+              </div>
+              <p className="text-white/90 mb-6 text-sm leading-relaxed">
+                Prefer a quick conversation? Schedule a 15-min coffee chat to discuss opportunities, collaborations, or just to connect!
+              </p>
+              <a
+                href="https://calendly.com/bhumikagohiya96/coffee-chat-with-bhumika?month=2026-01"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-amber-600 font-semibold rounded-xl hover:bg-amber-50 transition-colors w-full justify-center"
+              >
+                <Calendar size={20} />
+                Book Coffee Chat
+              </a>
             </div>
 
           </div>
