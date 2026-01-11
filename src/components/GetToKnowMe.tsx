@@ -4,8 +4,9 @@ const GetToKnowMe = () => {
   const stats = [
     { value: "4+", label: "Years Experience", gradient: "from-violet-500 to-purple-600" },
     { value: "500+", label: "Test Cases Automated", gradient: "from-cyan-500 to-blue-600" },
-    { value: "40%", label: "Effort Reduction", gradient: "from-emerald-500 to-teal-600" },
-    { value: "98%", label: "Defect Closure Rate", gradient: "from-amber-500 to-orange-600" },
+    { value: "85%", label: "Automation Coverage", gradient: "from-emerald-500 to-teal-600" },
+    { value: "40%", label: "Effort Reduction", gradient: "from-amber-500 to-orange-600" },
+    { value: "98%", label: "Defect Closure Rate", gradient: "from-rose-500 to-pink-600" },
   ];
 
   const expertiseAreas = [
@@ -95,10 +96,6 @@ const GetToKnowMe = () => {
     },
   ];
 
-  const impactMetrics = [
-    { value: "85%", label: "Automation Coverage", color: "from-violet-500 to-purple-600", size: "large" },
-    { value: "98%", label: "Defect Closure Rate", color: "from-emerald-500 to-teal-600", size: "large" },
-  ];
 
   return (
     <section id="about" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-slate-50 via-white to-slate-50">
@@ -133,7 +130,7 @@ const GetToKnowMe = () => {
         </div>
 
         {/* Expertise Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <div id="expertise" className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {expertiseAreas.map((area, index) => (
             <div
               key={index}
@@ -216,37 +213,6 @@ const GetToKnowMe = () => {
           </div>
         </div>
 
-        {/* Impact Metrics - Large Visual Blocks */}
-        <div>
-          <div className="text-center mb-10">
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-2">
-              Key Impact
-            </h3>
-            <p className="text-slate-500">Numbers that define my contribution</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {impactMetrics.map((metric, index) => (
-              <div
-                key={index}
-                className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${metric.color} p-10 text-white text-center hover:scale-[1.02] transition-all duration-300 shadow-xl`}
-              >
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-white rounded-full -translate-y-1/2 translate-x-1/2" />
-                  <div className="absolute bottom-0 left-0 w-32 h-32 bg-white rounded-full translate-y-1/2 -translate-x-1/2" />
-                </div>
-                
-                <div className="relative">
-                  <p className="font-display text-6xl md:text-7xl font-bold mb-2 group-hover:scale-110 transition-transform">
-                    {metric.value}
-                  </p>
-                  <p className="text-white/90 text-xl font-medium">{metric.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
