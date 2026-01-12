@@ -41,20 +41,20 @@ const Projects = () => {
 
   const technicalProjects = [
     {
-      id: undefined as string | undefined,
-      title: "Coming Soon: API Test Automation Framework",
+      id: "enterprise-api-automation" as string | undefined,
+      title: "Enterprise API Automation Framework",
       description: "Technical Project",
-      longDescription: "A comprehensive REST API testing framework built with Rest Assured, featuring data-driven testing, CI/CD integration with Jenkins, and detailed reporting.",
-      technologies: ["Java", "Rest Assured", "TestNG", "Jenkins", "Maven"],
+      longDescription: "A production-style API automation framework using Java, Rest Assured, and JUnit 5, designed to validate enterprise REST APIs through positive, negative, and authorization-based test scenarios.",
+      technologies: ["Java", "Rest Assured", "JUnit 5", "Maven", "CI/CD"],
       icon: Code,
       color: "from-amber-400 to-yellow-400",
       bgColor: "bg-gradient-to-br from-amber-50/80 to-yellow-50/60",
-      github: undefined as string | undefined,
+      github: "https://github.com/BhumikaGohiya/enterprise-api-automation",
       pdfLink: undefined as string | undefined,
       whitePaperLink: undefined as string | undefined,
       scope: "REST API Testing",
-      magnitude: "Multi-endpoint coverage",
-      impact: "Automated regression testing",
+      magnitude: "Multi-endpoint coverage, auth scenarios",
+      impact: "Automated regression & validation testing",
     },
     {
       id: undefined as string | undefined,
