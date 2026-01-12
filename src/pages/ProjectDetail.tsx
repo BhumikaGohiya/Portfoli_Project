@@ -163,6 +163,55 @@ const projectsData: Record<string, ProjectData> = {
     ],
     github: "https://github.com/BhumikaGohiya/AI-Art-Sentiment-Analysis",
   },
+  "enterprise-api-automation": {
+    title: "Enterprise API Automation Framework",
+    subtitle: "Production-Style API Testing",
+    description: "A comprehensive API automation framework using Java, Rest Assured, and JUnit 5, designed to validate enterprise REST APIs through positive, negative, and authorization-based test scenarios.",
+    category: "Technical Project",
+    scope: {
+      title: "Scope",
+      points: [
+        "Build production-grade REST API testing framework",
+        "Implement positive, negative, and authorization test scenarios",
+        "Create reusable test utilities and helper methods",
+        "Design modular architecture for enterprise scalability",
+        "Integrate with CI/CD pipelines for automated testing",
+      ],
+    },
+    magnitude: {
+      title: "Magnitude",
+      points: [
+        "Multi-endpoint API coverage with comprehensive test cases",
+        "Structured test organization following best practices",
+        "Maven-based project with dependency management",
+        "JUnit 5 test framework with modern assertions",
+        "Rest Assured for fluent API testing syntax",
+      ],
+    },
+    impact: {
+      title: "Impact",
+      points: [
+        "Enables rapid regression testing for API changes",
+        "Reduces manual testing effort significantly",
+        "Catches authentication and authorization vulnerabilities",
+        "Provides clear test reports for stakeholder visibility",
+        "Serves as template for enterprise API testing initiatives",
+      ],
+    },
+    overview: [
+      "This project demonstrates a production-style API automation framework built with Java, Rest Assured, and JUnit 5.",
+      "The framework is designed to validate enterprise REST APIs through comprehensive test scenarios including positive cases, negative/edge cases, and authorization-based tests.",
+      "It follows industry best practices for test organization, reusability, and maintainability, making it suitable for enterprise environments.",
+    ],
+    technologies: ["Java", "Rest Assured", "JUnit 5", "Maven", "API Testing", "CI/CD", "REST APIs"],
+    stats: [
+      { label: "Test Categories", value: "3+" },
+      { label: "API Endpoints", value: "Multi" },
+      { label: "Test Framework", value: "JUnit 5" },
+      { label: "Build Tool", value: "Maven" },
+    ],
+    github: "https://github.com/BhumikaGohiya/enterprise-api-automation",
+  },
 };
 
 const ProjectDetail = () => {
