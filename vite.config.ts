@@ -2,11 +2,14 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-// Vite configuration
-export default defineConfig({
+// Vite configuration for both Lovable preview and GitHub Pages
+export default defineConfig(({ command }) => ({
+  // Use /Portfolio/ base for production (GitHub Pages), root for dev (Lovable)
+  base: command === 'build' ? '/Portfolio/' : '/',
+
   plugins: [react()],
 
-  // Allow "@/..." imports (instead of long relative paths)
+  // Allow "@/..." imports
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -23,4 +26,4 @@ export default defineConfig({
   server: {
     port: 8080,
   },
-})
+}))
